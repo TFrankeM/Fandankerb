@@ -1,0 +1,61 @@
+Mini Mundo Fandankerb(p)
+
+create table Banda
+(
+	BandaID int not null,
+	BandaNome varchar(100) not null,
+	BandaEnd varchar(100) not null,
+	primary key (BandaID)
+);
+
+create table Instrumento
+(
+	InstID int not null,
+	AnoFabr date not null,
+	Marca varchar(100) not null,
+	Modelo varchar(100) not null,
+	InstIdade int not null,
+	primary key (InstID)
+);
+
+create table "Técnico de Reparo"
+(
+	TecID int not null,
+	TecNome varchar(100) not null,
+	TecEnd varchar(100) not null,
+	primary key (TecID)
+);
+
+create table Show
+(
+	ShowLocal varchar(100) not null,
+	ShowData date not null,
+	ShowTipo varchar(100) not null,
+	ShowNome int null,
+	primary key (ShowLocal, ShowData)
+);
+
+create table Apresentar
+(
+	BandaID int not null,
+	ShowLocal varchar(100) not null,
+	ShowData date not null,
+	foreign key (BandaID) references Banda(BandaID),
+	foreign key (ShowLocal, ShowData) references Show(ShowLocal, ShowData)
+
+);
+
+create table BandaTelefone
+(
+	BandaID int not null,
+	NumTelefone int not null,
+	foreign key (BandaID) references Banda(BandaID)
+);
+
+create table TécnicoTelefone
+(
+	TecID int not null,
+	NumTelefone int not null,
+	foreign key (TecID) references "Técnico de Reparo"(TecID)
+);
+
