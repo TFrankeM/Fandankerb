@@ -1,61 +1,67 @@
 Mini Mundo Fandankerb(p)
 
-create table Banda
+CREATE TABLE Banda
 (
-	BandaID int not null,
-	BandaNome varchar(100) not null,
-	BandaEnd varchar(100) not null,
-	primary key (BandaID)
+	BandaID 	int 		not null,
+	BandaNome 	varchar(100) 	not null,
+	BandaEnd 	varchar(100) 	not null,
+	UNIQUE (BandaNome),
+	PRIMARY KEY (BandaID)
 );
 
-create table Instrumento
+CREATE TABLE BandaTelefone
 (
-	InstID int not null,
-	AnoFabr date not null,
-	Marca varchar(100) not null,
-	Modelo varchar(100) not null,
-	InstIdade int not null,
-	primary key (InstID)
+	BandaID 	int 		not null,
+	NumTelefone 	varchar(30)	not null,
+	PRIMARY KEY (BandaID, NumTelefone),
+	FOREIGN KEY (BandaID) REFERENCES Banda(BandaID)
 );
 
-create table "Técnico de Reparo"
+CREATE TABLE Show
 (
-	TecID int not null,
-	TecNome varchar(100) not null,
-	TecEnd varchar(100) not null,
-	primary key (TecID)
+	ShowLocal 	varchar(100) 	not null,
+	ShowData 	date 		not null,
+	ShowTipo 	varchar(100) 	not null,
+	ShowNome 	varchar(100),
+	PRIMARY KEY (ShowLocal, ShowData)
 );
 
-create table Show
+CREATE TABLE Apresentar
 (
-	ShowLocal varchar(100) not null,
-	ShowData date not null,
-	ShowTipo varchar(100) not null,
-	ShowNome int null,
-	primary key (ShowLocal, ShowData)
+	BandaID 	int 		not null,
+	ShowLocal 	varchar(100) 	not null,
+	ShowData 	date 		not null,
+	Duracao		int		not null,
+	PRIMARY KEY (BandaID, ShowLocal, ShowData),
+	FOREIGN KEY (BandaID) REFERENCES Banda(BandaID),
+	FOREIGN KEY (ShowLocal, ShowData) REFERENCES Show(ShowLocal, ShowData)
 );
 
-create table Apresentar
+CREATE TABLE "Técnico de Reparo"
 (
-	BandaID int not null,
-	ShowLocal varchar(100) not null,
-	ShowData date not null,
-	foreign key (BandaID) references Banda(BandaID),
-	foreign key (ShowLocal, ShowData) references Show(ShowLocal, ShowData)
-
+	CPF 		varchar(20)	not null,
+	TecNome 	varchar(100) 	not null,
+	TecEndereco 	varchar(100) 	not null,
+	PRIMARY KEY (CPF)
 );
 
-create table BandaTelefone
+CREATE TABLE Instrumento
 (
-	BandaID int not null,
-	NumTelefone int not null,
-	foreign key (BandaID) references Banda(BandaID)
+	NúmeroSerial 	int 		not null,
+	Marca 		varchar(100) 	not null,
+	AnoFabr 	date 		not null,
+	Modelo 		varchar(100) 	not null,
+	CPF 		varchar(20)	not null,
+	BandaID 	int		not null,
+	PRIMARY KEY (NúmeroSerial),
+	FOREIGN KEY (BandaID) REFERENCES Banda(BandaID),
+	FOREIGN KEY (CPF) REFERENCES "Técnico de Reparo"(CPF)
 );
 
-create table TécnicoTelefone
+CREATE TABLE TécnicoTelefone
 (
-	TecID int not null,
-	NumTelefone int not null,
-	foreign key (TecID) references "Técnico de Reparo"(TecID)
+	CPF 		varchar(20)	not null,
+	NumTelefone 	varchar(30) 	not null,
+	FOREIGN KEY (CPF) REFERENCES "Técnico de Reparo"(CPF)
 );
 
