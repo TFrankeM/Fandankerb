@@ -6,13 +6,13 @@
 <h3>Exigências </h3>
 
 <ol>
-<li>Diagrama ER da Fandankerb;</li>
+<li><s>Diagrama ER da Fandankerb;</s></li>
 
-<li>Diagrama do esquema relacional da Fandankerb;</li>
+<li><s>Diagrama do esquema relacional da Fandankerb;</s></li>
 
-<li>No mínimo 3 registros de exemplo por tabela;</li>
+<li><s>No mínimo 3 registros de exemplo por tabela;</s></li>
 
-<li>Observar a 3FN;</li>
+<li><s>Observar a 3FN;</s></li>
 
 <li>Instruções SQL DDL para a criação do banco de dados;</li>
 
