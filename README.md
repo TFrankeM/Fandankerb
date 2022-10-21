@@ -3,7 +3,7 @@
 
 <hr>
 
-<h3>Exigências </h>
+<h3>Exigências </h3>
 
 <ol>
 <li>Diagrama ER da Fandankerb;</li>
