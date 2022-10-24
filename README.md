@@ -51,13 +51,13 @@
 
   <li><s>Observar a 3FN;</s></li>
 
-  <li>Instruções SQL DDL para a criação do banco de dados;</li>
+  <li><s>Instruções SQL DDL para a criação do banco de dados;</s></li>
 
-  <li>Instruções SQL DML para a inserção dos registros de exemplo em todas as tabelas;</li>
+  <li><s>Instruções SQL DML para a inserção dos registros de exemplo em todas as tabelas;</s></li>
 
   <li>Implantação do banco de dados da Fandankerb no banco de dados do laboratório;</li>
 
   <li>Criação do diagrama do esquema relacional dentro do banco de dados do laboratório;</li>
 
-  <li>Elaboração de uma instrução SQL que liste a quantidade de shows em que se apresentou uma determinada banda.</li>
+  <li><s>Elaboração de uma instrução SQL que liste a quantidade de shows em que se apresentou uma determinada banda.<s></li>
 </ol>
