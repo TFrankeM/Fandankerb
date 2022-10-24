@@ -1,3 +1,5 @@
+/* Comando para inserir dados nas relações */
+
 INSERT INTO Banda VALUES ('12345','Pérola Negra','Rua Curitibana');
 INSERT INTO Banda VALUES ('12312','Os Atuais','Avenida Morro Reuter');
 INSERT INTO Banda VALUES ('14135','Banda Marcial','Avenida das Nações');
