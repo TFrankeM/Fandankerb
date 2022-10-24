@@ -1,0 +1,6 @@
+/* Comando que lista em quantos shows cada banda participou */
+
+select BandaId, count(distinct showdata) as "Shows em que se apresentou"
+from apresentar
+group by bandaid
+go
