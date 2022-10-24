@@ -1,4 +1,4 @@
-Mini Mundo Fandankerb(p)
+/* Mini Mundo Fandankerb(p) */
 
 CREATE TABLE Banda
 (
