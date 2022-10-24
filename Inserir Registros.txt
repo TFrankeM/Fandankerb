@@ -23,10 +23,10 @@ INSERT INTO "Técnico de Reparo" VALUES ('18234256783','Av. Ernesto Neugebauer, 
 INSERT INTO "Técnico de Reparo" VALUES ('29382736251','Av. Ipiranga, 6681 - Partenon, Poa - RS','Pedro Passos');
 INSERT INTO "Técnico de Reparo" VALUES ('92817361523','R. Sarmento Leite, 320 - Centro Histórico, Poa - RS','Matheus Motta');
 
-INSERT INTO Instrumento VALUES ('1218','Telecaster','05/06/2011','Vintage TL-2 bk - phx','19123412153','12345');
-INSERT INTO Instrumento VALUES ('1412','Roland','15/09/1988','Jupiter-X','92817361523','12312');
-INSERT INTO Instrumento VALUES ('6745','Yamaha','20/04/2004','Yamaha YPT-370','29382736251','12345');
-INSERT INTO Instrumento VALUES ('3421', 'Steinway','25/11/1999','Lyngdorf Model S','92817361523','56343');
+INSERT INTO Instrumento VALUES ('1218','Telecaster','2011-Jun-05','Vintage TL-2 bk - phx','19123412153','12345');
+INSERT INTO Instrumento VALUES ('1412','Roland','1988-Sep-15','Jupiter-X','92817361523','12312');
+INSERT INTO Instrumento VALUES ('6745','Yamaha','2004-Apr-20','Yamaha YPT-370','29382736251','12345');
+INSERT INTO Instrumento VALUES ('3421', 'Steinway','2009-Nov-25','Lyngdorf Model S','92817361523','56343');
 
 INSERT INTO TécnicoTelefone VALUES ('19123412153','(33) 26546564');
 INSERT INTO TécnicoTelefone VALUES ('18234256783','(71) 45126598');
